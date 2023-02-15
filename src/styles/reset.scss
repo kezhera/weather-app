@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0A2647;
+    padding: 5rem 1rem;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:focus{
+        outline: none;
+    }
+}
+
+input{
+    border: none;
+    &:focus{
+        outline: none;
+    }
+}

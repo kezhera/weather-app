@@ -1,6 +1,8 @@
+import Home from "./pages/home";
+
 function App() {
   return (
-    <div>Weather App</div>
+    <Home />
   );
 }
 
