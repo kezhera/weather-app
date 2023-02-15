@@ -3,3 +3,11 @@
     width: 100%;
     margin: 0 auto;
 }
+
+.weatherCardList{
+    margin-top: 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 1rem;
+}
