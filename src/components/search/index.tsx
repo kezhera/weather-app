@@ -10,11 +10,12 @@ interface LocationSearchProps extends InputHTMLAttributes<HTMLInputElement>  {
 const LocationSearch = ({onLocationSubmit ,...rest}: LocationSearchProps) => { 
     const inputRef = useRef<HTMLInputElement>(null)
     
-    const onSearchButtonSubmit = () => {
+    const onSearchButtonSubmit = (e: React.SyntheticEvent) => {
+        e.preventDefault()
         onLocationSubmit(inputRef.current?.value ?? '')
     }
 
-    return <div className={styles.searchWrapper}>
+    return <form className={styles.searchWrapper} onSubmit={(e) => onSearchButtonSubmit(e)}>
         <input 
             type="text" 
             className={styles.searchInput}  
@@ -22,8 +23,8 @@ const LocationSearch = ({onLocationSubmit ,...rest}: LocationSearchProps) => {
             ref={inputRef} 
             {...rest}
         />
-        <button className={styles.searchSubmit} type="submit" onClick={onSearchButtonSubmit}>Search</button>
-    </div>
+        <button className={styles.searchSubmit} type="submit">Search</button>
+    </form>
 }
 
 export default LocationSearch
