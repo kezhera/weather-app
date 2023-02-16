@@ -17,6 +17,8 @@ const api: apiType = (method, url) =>
     );
   });
 
-export default {
+const Request = {
   get: (url: string) => api("get", url),
 };
+
+export default Request;

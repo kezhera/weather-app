@@ -94,7 +94,7 @@ const useHomeState = () => {
         setDate(response);
       });
     }
-  }, []);
+  }, [setDate, setLoader]);
 
   return {
     isLoading,
