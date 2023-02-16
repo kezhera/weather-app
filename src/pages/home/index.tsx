@@ -1,10 +1,5 @@
-import { useState, useEffect } from "react";
 import LocationSearch from "../../components/Search";
 import WeatherCard from "../../components/WeatherCard";
-import {
-  getWeatherByQuery,
-  getWeatherByCoordinant,
-} from "../../services/getWeather";
 import styles from "./home.module.scss";
 import useHomeState from "./state";
 
